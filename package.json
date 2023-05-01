@@ -1,0 +1,21 @@
+{
+  "name": "based_vite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --mode development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.1",
+    "sass": "^1.62.1",
+    "sass-loader": "10.1.1",
+    "vite": "^4.3.3",
+    "vite-plugin-html": "^3.2.0",
+    "vue": "^3.2.47"
+  }
+}

@@ -1,0 +1,56 @@
+$bdColor: #b6dcfb;
+$ftColor: #000;
+$bgColor: #f0f0f0;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.suspended-rollup {
+  background: #f0f0f0;
+  border: 2px solid transparent;
+  color: $ftColor;
+  position: relative;
+  transition: all 1s;
+  z-index: 2;
+  overflow: hidden;
+
+  &::before {
+    display: block;
+    content: '';
+    width: 0;
+    height: 100%;
+    background: $bdColor;
+    transform: skewX(45deg) translateX(-20px);
+    transition: all 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+
+  &:hover::before {
+    width: 200%;
+  }
+}

@@ -1,0 +1,142 @@
+:root {
+  --bdColor: #b6dcfb;
+  --ftColor: #000;
+  --bgColor: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.header {
+  height: 50px;
+  min-width: 1400px;
+  background-color: #ccc;
+}
+.hd-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.logo {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  float: left;
+}
+.nav {
+  float: left;
+  margin-right: 20px;
+}
+.nav-item {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  float: left;
+}
+
+.nav-item:hover{
+  background-color: #999;
+}
+
+.nav-item:hover a{
+  color: #fff;
+}
+.search {
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+}
+.search input {
+  width: 200px;
+  height: 30px;
+  padding-left: 10px;
+  margin-right: 5px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+.search button {
+  width: 80px;
+  height: 30px;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.user-box {
+  width: 200px;
+  height: 50px;
+  float: left;
+}
+.btn-box {
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+}
+.btn-box button {
+  width: 50px;
+  height: 30px;
+  margin-top: 10px;
+  float: left;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.btn-box button:first-child {
+  margin-right: 10px;
+}
+
+.suspended-rollup {
+  background: #f0f0f0;
+  border: 2px solid transparent;
+  color: var(--ftColor);
+  position: relative;
+  transition: all 1s;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.suspended-rollup::before {
+  display: block;
+  content: '';
+  width: 0;
+  height: 100%;
+  background: var(--bdColor);
+  transform:skewX(45deg) translateX(-20px);
+  transition: all 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.suspended-rollup:hover::before {
+  width: 200%;
+}
+
+.suspended-rollup:hover {
+  color: #fff;
+}
